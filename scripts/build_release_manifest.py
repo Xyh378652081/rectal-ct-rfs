@@ -20,7 +20,12 @@ def main() -> None:
     excluded = {"release_manifest.json", "synthetic_prediction.csv"}
     files = {}
     for path in sorted(ROOT.rglob("*")):
-        if not path.is_file() or path.name in excluded or "__pycache__" in path.parts:
+        if (
+            not path.is_file()
+            or path.name in excluded
+            or "__pycache__" in path.parts
+            or ".git" in path.parts
+        ):
             continue
         files[path.relative_to(ROOT).as_posix()] = {
             "sha256": sha256(path),

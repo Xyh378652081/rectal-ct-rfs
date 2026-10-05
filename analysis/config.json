@@ -1,0 +1,218 @@
+{
+  "analysis_id": "RECTAL_LATEST_CLINICAL_V3_20261001",
+  "status": "PUBLIC_REPRODUCTION_TEMPLATE",
+  "clinical_source": "private/latest_clinical.xlsx",
+  "followup_source": "private/followup.xlsx",
+  "output_root": "private/reproduced_run",
+  "imaging_mapping": "private/imaging_mapping.csv",
+  "cache_manifest": "private/cache_manifest.csv",
+  "cnn_cache_root": "private/cnn_cache",
+  "existing_devonly_embedding": "private/cnn_embedding_devonly.csv",
+  "development_center": "Center1",
+  "external_centers": [
+    "Center2",
+    "Center3",
+    "Center4"
+  ],
+  "endpoint": {
+    "name": "RFS",
+    "source_time_unit": "days",
+    "days_per_month": 30.4375,
+    "definition": "first local recurrence, distant metastasis, or death from any cause",
+    "time_origin": "curative-intent surgery date",
+    "primary_horizon_months": 36,
+    "secondary_horizons_months": [
+      12,
+      24
+    ],
+    "source_event_name": "RFS事件",
+    "source_time_name": "RFS时间（天）"
+  },
+  "clinical_predictors": [
+    {
+      "locked_name": "age",
+      "source_name": "年龄",
+      "role": "continuous"
+    },
+    {
+      "locked_name": "sex",
+      "source_name": "性别（1=男，2=女）",
+      "role": "categorical"
+    },
+    {
+      "locked_name": "differentiation",
+      "source_name": "肿瘤分化程度（1=高分化，2=中分化，3=低分化）",
+      "role": "categorical"
+    },
+    {
+      "locked_name": "tumor_size_cm",
+      "source_name": "病灶大小(最长径 cm)",
+      "role": "continuous"
+    },
+    {
+      "locked_name": "distance_from_anal_verge_cm",
+      "source_name": "肿瘤距肛缘（cm）",
+      "role": "continuous"
+    },
+    {
+      "locked_name": "margin_status",
+      "source_name": "切缘状态（1=阳性；0=阴性）",
+      "role": "categorical"
+    },
+    {
+      "locked_name": "pni",
+      "source_name": "神经侵犯PNI（1=有；0=无）",
+      "role": "categorical"
+    },
+    {
+      "locked_name": "lvi",
+      "source_name": "脉管癌栓LVI（1=有；0=无）",
+      "role": "categorical"
+    },
+    {
+      "locked_name": "pt_stage",
+      "source_name": "pT分期",
+      "role": "categorical"
+    },
+    {
+      "locked_name": "pn_stage",
+      "source_name": "pN分期",
+      "role": "categorical"
+    },
+    {
+      "locked_name": "examined_node_count",
+      "source_name": "检及淋巴结总数",
+      "role": "continuous"
+    },
+    {
+      "locked_name": "cea",
+      "source_name": "CEA（ng/ml）",
+      "role": "continuous_log1p"
+    },
+    {
+      "locked_name": "ca19_9",
+      "source_name": "CA19-9（U/ml）",
+      "role": "continuous_log1p"
+    }
+  ],
+  "forbidden_predictor_index_ranges0": [
+    [
+      26,
+      30
+    ],
+    [
+      34,
+      34
+    ],
+    [
+      41,
+      77
+    ],
+    [
+      81,
+      82
+    ]
+  ],
+  "radiomics": {
+    "labels": {
+      "1": "wall",
+      "2": "tumor",
+      "3": "nodes"
+    },
+    "target_spacing_mm": [
+      1,
+      1,
+      1
+    ],
+    "crop_padding_mm": 10,
+    "bin_width_hu": 25,
+    "resegment_range_hu": [
+      -200,
+      300
+    ],
+    "image_type": "Original",
+    "feature_classes": [
+      "shape",
+      "firstorder",
+      "glcm",
+      "glrlm",
+      "glszm",
+      "gldm",
+      "ngtdm"
+    ]
+  },
+  "models": {
+    "M0": "clinical_pathology_all_cases",
+    "M0b": "clinical_pathology_image_matched",
+    "M1": "tumor_radiomics",
+    "M2": "tumor_wall_radiomics",
+    "M3": "tumor_nodes_radiomics",
+    "M4": "three_structure_radiomics_spatial",
+    "M5": "full_multistructure_radiomics",
+    "M6": "cnn_embedding",
+    "M7": "clinical_tumor",
+    "M8": "clinical_tumor_wall",
+    "M9": "clinical_three_structure_spatial",
+    "M10": "clinical_full_multistructure",
+    "M11": "clinical_cnn",
+    "M12": "clinical_radiomics_cnn_late_fusion",
+    "M13": "end_to_end_small_multistructure_3d_cnn"
+  },
+  "validation": {
+    "unit": "patient",
+    "outer_folds": 5,
+    "inner_folds": 3,
+    "cox_penalizer_grid": [
+      0.02,
+      0.08,
+      0.2,
+      0.5
+    ],
+    "radiomics_pca_components": {
+      "tumor": 10,
+      "tumor_wall": 15,
+      "tumor_nodes": 15,
+      "three_structure": 20,
+      "full": 20
+    },
+    "cnn_pca_components": 12,
+    "bootstrap_repetitions": 2000,
+    "permutation_repetitions": 100,
+    "random_seeds": [
+      20260829,
+      20260830,
+      20260831,
+      20260901,
+      20260902
+    ],
+    "primary_comparison": "M12_vs_M0b",
+    "nested_cv_scope": "Downstream preprocessing/PCA/Cox tuning conditional on frozen features and a Center1 SSL encoder; not fully nested CNN pretraining.",
+    "external_use": "Previously inspected external centers; updated-model reassessment, not a new unseen cohort.",
+    "cnn_retraining": false
+  },
+  "reference_root": "private/reference_run",
+  "prior_snapshot_source": "private/prior_analysis_table.csv",
+  "prior_snapshot_expected_sha256": "7ff83758f61798aec9cff1e795c6c09d7464e1dbf3dbcca15f3dd48a8f5d9f9f",
+  "clinical_source_expected_sha256": "da6939704c7d67e6586fa2d65bb4107e08f040b2f461b7cb0b099469079bc679",
+  "followup_source_expected_sha256": "08e7ef25d39c31123dca37cc9d86e8fc014af9f7bca04576c42eb182f1674320",
+  "followup_cutoff_date": "2026-09-27",
+  "removed_predictors": [
+    "neoadjuvant_treatment",
+    "regional_node_metastasis",
+    "adjacent_organ_invasion",
+    "metastatic_node_count"
+  ],
+  "source_id_name": "研究患者ID",
+  "source_center_name": "中心区分",
+  "source_ct_date_name": "CT检查时间",
+  "feature_sources": {
+    "pyradiomics": "private/multistructure_pyradiomics_features.csv",
+    "engineered_spatial": "private/engineered_spatial_features.csv",
+    "cnn": "private/cnn_embedding_center1_SSL.csv"
+  },
+  "expected_feature_hashes": {
+    "pyradiomics": "21d6144ff38855f012e6d266394bdc4084844d3300e7b09dd492fc522ab54500",
+    "engineered_spatial": "84a00eedd348ef3a2306ff8c372db56a747fb25b2dcc1611a4f2ff82f8006cc5",
+    "cnn": "c1dc441f2c28fd4e6f5a197284ada2e3ca8156107db8b8958b8b96a08a8d1392"
+  }
+}

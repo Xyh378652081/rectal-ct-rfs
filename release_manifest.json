@@ -1,0 +1,203 @@
+{
+  "release": "v1.1.0",
+  "analysis_id": "RECTAL_LATEST_CLINICAL_V3_20261001",
+  "patient_level_data_included": false,
+  "files": {
+    ".gitignore": {
+      "sha256": "146357dd3611b32c22d49f4662254487008feff72815b2e1d5b07ee5637c36db",
+      "bytes": 159
+    },
+    ".pytest_cache/.gitignore": {
+      "sha256": "e7c6bb30148cf667606dcd63e7ca77acaa3cfb0c8303bf09e6419e1e1669dc6d",
+      "bytes": 39
+    },
+    ".pytest_cache/CACHEDIR.TAG": {
+      "sha256": "37dc88ef9a0abeddbe81053a6dd8fdfb13afb613045ea1eb4a5c815a74a3bde4",
+      "bytes": 191
+    },
+    ".pytest_cache/README.md": {
+      "sha256": "420e808d79a6c25d3cda0af33bc4782314a14949866682c68ce8149e89b66b70",
+      "bytes": 310
+    },
+    ".pytest_cache/v/cache/nodeids": {
+      "sha256": "a67650cc624d98387e91358642bf213a0d525dc41f37b96cb900f4a7e7c69ee0",
+      "bytes": 249
+    },
+    "analysis/audit_selected_fits.py": {
+      "sha256": "00812206bfda6e8b5f6c05a1668e0dc34d4882cacfcc2a08d2f2b0123f50ceb9",
+      "bytes": 3116
+    },
+    "analysis/config.json": {
+      "sha256": "397f51cf1390134714db3b8a8e17c7cd6453372cf7e7cd0c0e377e3c328704fe",
+      "bytes": 6197
+    },
+    "analysis/finalize_run.py": {
+      "sha256": "2dfdd630f3738721c466166fad45eb794c67933df5da7f94b2986a885b0ce160",
+      "bytes": 5976
+    },
+    "analysis/locked_external_validation.py": {
+      "sha256": "4099d22e233e192ecbc35a1d79979f98f919ba64e8ca6966262837233d0505ce",
+      "bytes": 7167
+    },
+    "analysis/no_neoadjuvant_core.py": {
+      "sha256": "f85dc552efcdbc70658337f2e0d7b4dcdec087f3cc7ab5ed9457975e4a673282",
+      "bytes": 25089
+    },
+    "analysis/prepare_inputs.py": {
+      "sha256": "f51bdc13f6a70fa4d90f6f709ba681f92a44e7febcffffdc6288ece135410d26",
+      "bytes": 7971
+    },
+    "analysis/README.md": {
+      "sha256": "fb0cd6d357787e8bc2127a3022c70e99116ace6ee135aacda2c1ef6f38f57f2b",
+      "bytes": 2202
+    },
+    "analysis/summarize_update.py": {
+      "sha256": "49859dd93c175b4af68d1439242a9b8daf41bf7980ab55007e977970351da10a",
+      "bytes": 10858
+    },
+    "analysis/train_models.py": {
+      "sha256": "ad112420cddc9b90a9d6fd746ee9bf8245496f96a1e408cf1f68de5f5f736a18",
+      "bytes": 3226
+    },
+    "CITATION.cff": {
+      "sha256": "593d7ac3959ed04d4a2c46d9f44f16f12afcdb3e03e75e0588ee4d4aa24e4e49",
+      "bytes": 392
+    },
+    "configs/pyradiomics_original.yaml": {
+      "sha256": "1a9d4112e22ccd8db0aff1267c9978352cb0d25ed91b0af847d1bce17344b80c",
+      "bytes": 466
+    },
+    "DATA_ACCESS.md": {
+      "sha256": "9d8b89347afe278d308f3442f40c7920116e597c7dc29885bf91c0e082eab466",
+      "bytes": 1417
+    },
+    "docs/CHANGELOG.md": {
+      "sha256": "6312fe009a7c4f122fe34a408a35e8c765ae186a7f2c1cd7183444fed287565f",
+      "bytes": 1408
+    },
+    "docs/MANUSCRIPT_AVAILABILITY_TEXT.md": {
+      "sha256": "5fe45d78f1e8651fb73f7148a393ded76b322f9a5a8cafde80e87395abfd2f1b",
+      "bytes": 5061
+    },
+    "docs/RELEASE_WORKFLOW_CN.md": {
+      "sha256": "77bea991f24b9572f9e91376e993e4765cc3600ba86418de73bd1987dbef7855",
+      "bytes": 1850
+    },
+    "docs/VERIFICATION_REPORT.md": {
+      "sha256": "5485bcc49794a99fdcad3434f189962fe48fd76eae2df489b300e9b6206c57db",
+      "bytes": 1445
+    },
+    "examples/make_synthetic_input.py": {
+      "sha256": "15d89d3325874b0858833a4e0fca434c67e7735bb87ac87ace1e776d261133bb",
+      "bytes": 248
+    },
+    "examples/synthetic_input.csv": {
+      "sha256": "39022ff98247720586706a230d9326d2576c6239b3b4cb43b61bab7ac2608e73",
+      "bytes": 25365
+    },
+    "LICENSE": {
+      "sha256": "9f1abe28a25b5f6f95c58a81a647de3fa72ff6388d228c59bddd079255709989",
+      "bytes": 1068
+    },
+    "MODEL_CARD.md": {
+      "sha256": "332d9b768dd786691267326bbd09db8f31f333dca39c18177f4595cb68730ffa",
+      "bytes": 3087
+    },
+    "MODEL_LICENSE.txt": {
+      "sha256": "8102c97a41f20f2ac732e809eb9fce019d6c8067778bf1bd3897480a3d33a590",
+      "bytes": 655
+    },
+    "models/m12_cox_parameters.npz": {
+      "sha256": "3ebafb3cb552e76c9df58948b8675f47ec51dde676d3af24500fe663fe341143",
+      "bytes": 1593
+    },
+    "models/m12_metadata.json": {
+      "sha256": "bf25f3801685b84c7506a1c942258911ef74a7b7a33112728512fc92429a7178",
+      "bytes": 2349
+    },
+    "models/m12_preprocessing.joblib": {
+      "sha256": "6abb7a4b278bc49b7b7e48fdd6ce096cdb7afbc8403bd00c4f63c487e3fb84c9",
+      "bytes": 96258
+    },
+    "models/ssl_3dcnn_encoder.pt": {
+      "sha256": "e69615ce7f307ae58ddbdf19457ebd89c3d27ce02bb38718db1dfdd8919c0819",
+      "bytes": 334701
+    },
+    "README.md": {
+      "sha256": "2ea85df5b0cab567b031029c80ad636ea7278ad0ba5c9a2485c99c8c60a6c550",
+      "bytes": 5014
+    },
+    "requirements-imaging.txt": {
+      "sha256": "3b2e08efeda298720661b5195f3cd7f93cfec050073de0d97f5be3f7d92a8d0f",
+      "bytes": 87
+    },
+    "requirements.txt": {
+      "sha256": "171f36ca8fd1813c27f2b661207223cccc6f0b8be68f8392693a3b4f8881e31d",
+      "bytes": 94
+    },
+    "schemas/clinical_variables.csv": {
+      "sha256": "9153f16dec720ae2c4bf89db440cb8a6896ba623f96e1faaa3e72765a34a50df",
+      "bytes": 1212
+    },
+    "schemas/cnn_features.txt": {
+      "sha256": "7b0bb81af82a82bdb444cf71ff8c89ff658b392823428ef78b54dc2381bfed1a",
+      "bytes": 1152
+    },
+    "schemas/input_schema.json": {
+      "sha256": "980214700302c246c8e47b9d9aad1a39f2d79363bd11c6d99c0ae8913e2d5e9d",
+      "bytes": 20176
+    },
+    "schemas/radiomics_spatial_features.txt": {
+      "sha256": "df78d959b5d2c3c8397f4a77bd15f827643af4bb3234bbc3fe3e3dd178043a7a",
+      "bytes": 15039
+    },
+    "scripts/build_release_manifest.py": {
+      "sha256": "777385846f3c1a133a4b8a85da0a18a813b66ce51497ca3bc52a89d5dca4a9fe",
+      "bytes": 1076
+    },
+    "scripts/export_clean_model.py": {
+      "sha256": "538de78cba34f74ec3d613e2f9f596981f52cf6eb51c25fe9c51386e415da53a",
+      "bytes": 3071
+    },
+    "scripts/generate_public_assets.py": {
+      "sha256": "fe86b73ef263d74e4fbf242ccbe72d1b899cae6fb4c4eaa7626a8a18ba56a211",
+      "bytes": 3583
+    },
+    "scripts/predict.py": {
+      "sha256": "a7852ffda86f711ad987cea620115967abe188cef96651677bde554a3b082726",
+      "bytes": 904
+    },
+    "src/rectal_ct_rfs/__init__.py": {
+      "sha256": "a1dab05a754afe82c312e48e537ba65ae779dd572d567932fc35a1ed066e535e",
+      "bytes": 125
+    },
+    "src/rectal_ct_rfs/cnn_encoder.py": {
+      "sha256": "0ebdb817a3d769d0b6700ad10c9d454ea41dab2fa9a7a8777446ecadb4342f69",
+      "bytes": 2140
+    },
+    "src/rectal_ct_rfs/engineered_features.py": {
+      "sha256": "6398c1014f58112fbdd1ed83fc40c59504ab6dcc072fdfe638b4ee6150dbd473",
+      "bytes": 6035
+    },
+    "src/rectal_ct_rfs/model.py": {
+      "sha256": "49e2dcc0f383b84cc3b627a51101b2244103d9d974d085d6c943a80fee338e67",
+      "bytes": 1543
+    },
+    "src/rectal_ct_rfs/preprocessing.py": {
+      "sha256": "84f2c2566c92873d5e4091cae66cc32c8cd2c231b1067b6137d01d0de24ac5fe",
+      "bytes": 3006
+    },
+    "src/rectal_ct_rfs/radiomics_features.py": {
+      "sha256": "5c808047d48a7fa40feb0d2b59ab7bfe61f0e44413cf391785b105a815fd9880",
+      "bytes": 3527
+    },
+    "tests/test_locked_external_validation.py": {
+      "sha256": "e6a1062c870d6772580a8ce1bb632f3d60a64040864e842c86096916148fc431",
+      "bytes": 1739
+    },
+    "tests/test_smoke.py": {
+      "sha256": "efcaf587f6ed685ab88eaba6f120203da7b59c67afbf75a05497cb6416a56880",
+      "bytes": 913
+    }
+  }
+}

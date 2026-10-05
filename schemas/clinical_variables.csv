@@ -1,0 +1,14 @@
+﻿variable,english_label,chinese_label,type,unit_or_standard,allowed_values
+age,Age,年龄,continuous,years,Nonnegative numeric value
+sex,Sex,性别,categorical,,1=male; 2=female
+differentiation,Histologic differentiation,组织学分化程度,categorical,,1=well; 2=moderate; 3=poor
+tumor_size_cm,Maximum tumor diameter,肿瘤最大径,continuous,cm,Nonnegative numeric value
+distance_from_anal_verge_cm,Distance from anal verge,肿瘤距肛缘距离,continuous,cm,Nonnegative numeric value
+margin_status,Resection margin status,切缘状态,categorical,,0=negative; 1=positive
+pni,Perineural invasion,神经侵犯,categorical,,0=absent; 1=present
+lvi,Lymphovascular invasion,脉管侵犯,categorical,,0=absent; 1=present
+pt_stage,Pathologic T category,病理T分期,categorical,AJCC/UICC 8th,"0, 1, 2, 3, 4, 4a, or 4b"
+pn_stage,Pathologic N category,病理N分期,categorical,AJCC/UICC 8th,"0, 1a, 1b, 2a, or 2b"
+examined_node_count,Examined lymph-node count,检及淋巴结总数,continuous,nodes,Nonnegative integer
+cea,Carcinoembryonic antigen,癌胚抗原,continuous,ng/mL,Nonnegative numeric value
+ca19_9,Carbohydrate antigen 19-9,糖类抗原19-9,continuous,U/mL,Nonnegative numeric value

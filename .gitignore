@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.venv/
+.idea/
+.vscode/
+*.log
+examples/synthetic_prediction.csv
+private/
+patient_data/
+images/
+labels/
+predictions/
+*.dcm
+*.nii
+*.nii.gz

@@ -1,0 +1,6 @@
+joblib==1.5.3
+lifelines==0.30.3
+numpy==2.5.2
+pandas==2.3.3
+scipy>=1.15,<2
+scikit-learn==1.9.0

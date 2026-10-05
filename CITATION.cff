@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this software or model, please cite the associated article and archived software release."
+title: "Rectal CT recurrence-risk model"
+type: software
+version: 1.1.0
+date-released: 2026-10-06
+authors:
+  - name: "Anonymous authors for peer review"
+repository-code: "[PUBLIC_REPOSITORY_URL]"
+identifiers:
+  - type: doi
+    value: "[ZENODO_DOI]"
+license: MIT

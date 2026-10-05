@@ -58,9 +58,8 @@ See `DATA_ACCESS.md` for the controlled-access procedure and `MODEL_CARD.md` for
 
 For peer review, replace the placeholders below after creating the immutable release:
 
-- Repository: `[PUBLIC_REPOSITORY_URL]`
+- Repository: `https://github.com/Xyh378652081/rectal-ct-rfs`
 - Release: `v1.1.0`
-- Commit: `[COMMIT_SHA]`
 - Archived DOI: `[ZENODO_DOI]`
 
 The repository and archived release should be retained for at least five years after publication, consistent with RSNA policy.

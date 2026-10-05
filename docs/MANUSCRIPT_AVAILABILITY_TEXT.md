@@ -18,7 +18,7 @@ An anonymized, patient-data-free review package containing the analysis code, fr
 
 ### Code Availability
 
-The analysis code, frozen preprocessing parameters, trained model parameters, self-supervised encoder weights, input schemas, and reproducible inference example are publicly available at `[GITHUB_URL]` (release `v1.1.0`; commit `[COMMIT_SHA]`) and are permanently archived at Zenodo (`[ZENODO_DOI]`). The public artifacts contain no patient identifiers, individual follow-up times, outcomes, CT images, segmentation masks, or patient-level predictions. The archived software and link will be maintained for at least 5 years after publication.
+The analysis code, frozen preprocessing parameters, trained model parameters, self-supervised encoder weights, input schemas, and reproducible inference example are publicly available at `https://github.com/Xyh378652081/rectal-ct-rfs` (release `v1.1.0`). The public artifacts contain no patient identifiers, individual follow-up times, outcomes, CT images, segmentation masks, or patient-level predictions. The software release and repository link will be maintained for at least 5 years after publication.
 
 ## 中文核对稿
 

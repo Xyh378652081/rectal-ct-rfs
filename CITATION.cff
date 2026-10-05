@@ -6,7 +6,7 @@ version: 1.1.0
 date-released: 2026-10-06
 authors:
   - name: "Anonymous authors for peer review"
-repository-code: "[PUBLIC_REPOSITORY_URL]"
+repository-code: "https://github.com/Xyh378652081/rectal-ct-rfs"
 identifiers:
   - type: doi
     value: "[ZENODO_DOI]"
